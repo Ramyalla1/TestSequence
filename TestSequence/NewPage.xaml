@@ -1,0 +1,44 @@
+<Window x:Class="XmlViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="XML Sequence Viewer" Height="600" Width="1000"
+        Background="#F5F5F5">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Toolbar -->
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,10">
+            <Button Content="Load XML Files" Width="150" Margin="5" Click="LoadXmlFiles_Click"/>
+            <Button Content="Submit" Width="100" Margin="5" Click="Submit_Click"/>
+        </StackPanel>
+
+        <!-- XML File List -->
+        <GroupBox Header="XML Files" Grid.Row="1" Grid.Column="0" Margin="5">
+            <ListBox Name="XmlFileList" SelectionChanged="XmlFileList_SelectionChanged"/>
+        </GroupBox>
+
+        <!-- Sequence List -->
+        <GroupBox Header="Sequences" Grid.Row="1" Grid.Column="1" Margin="5">
+            <ListBox Name="SequenceList" SelectionChanged="SequenceList_SelectionChanged"/>
+        </GroupBox>
+
+        <!-- Section List -->
+        <GroupBox Header="Sections" Grid.Row="1" Grid.Column="2" Margin="5">
+            <ListBox Name="SectionList" SelectionChanged="SectionList_SelectionChanged"/>
+        </GroupBox>
+
+        <!-- Section Content Viewer -->
+        <GroupBox Header="Section Content" Grid.Row="2" Grid.ColumnSpan="3" Margin="5">
+            <TextBox Name="SectionContentViewer" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" AcceptsReturn="True"/>
+        </GroupBox>
+    </Grid>
+</Window>

@@ -1,0 +1,81 @@
+﻿<Window x:Class="TestSequence.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <!-- First Stylish TextBox -->
+        <Border CornerRadius="10" 
+                Background="White" 
+                BorderBrush="#007ACC" 
+                BorderThickness="2" 
+                Margin="50,80,450,280"
+                Effect="{DynamicResource DropShadowEffect}">
+            <TextBox Name="myTextBox"
+                     Text="Enter text here"
+                     FontSize="18"
+                     FontWeight="SemiBold"
+                     Foreground="#007ACC"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Padding="10"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Left"
+                     />
+        </Border>
+
+        <!-- Second Stylish TextBox -->
+        <Border CornerRadius="10" 
+                Background="White" 
+                BorderBrush="#007ACC" 
+                BorderThickness="2" 
+                Margin="50,240,450,130"
+                Effect="{DynamicResource DropShadowEffect}">
+            <TextBox Name="myTextBox1"
+                     Text="Enter more text"
+                     FontSize="18"
+                     FontWeight="SemiBold"
+                     Foreground="#007ACC"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     Padding="10"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Left"
+                     />
+        </Border>
+
+        <Button Name="myButton"
+        Content="Click Me"
+        Width="120"
+        Height="40"
+        Margin="470,80,160,280"
+        Background="#007ACC"
+        Foreground="White"
+        FontWeight="Bold"
+        BorderBrush="Transparent"
+        Click="myButton_Click"/>
+        <Button Name="myButton1"
+Content="Click Me"
+Width="120"
+Height="40"
+Margin="495,252,185,142"
+Background="#007ACC"
+Foreground="White"
+FontWeight="Bold"
+BorderBrush="Transparent"
+Click="myButton_Click"/>
+
+
+        <!-- Drop Shadow Effect Resource -->
+        <Grid.Resources>
+            <DropShadowEffect x:Key="DropShadowEffect"
+                              Color="Black"
+                              Direction="320"
+                              ShadowDepth="5"
+                              Opacity="0.3"
+                              BlurRadius="10"/>
+        </Grid.Resources>
+
+
+    </Grid>
+</Window>
