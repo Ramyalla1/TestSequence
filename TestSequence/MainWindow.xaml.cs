@@ -16,41 +16,44 @@ namespace TestSequence
     /// </summary>
     public partial class MainWindow : Window
     {
-        private void myButton_Click(object sender, RoutedEventArgs e)
+
+        private void BrowseTeax_Click(object sender, RoutedEventArgs e)
         {
+
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.Title = "Select Config File";
-            if (dlg.ShowDialog() == true)
+
+            dlg.Filter = "T-eax Files (*.teax)|*.teax|All Files (*.*)|*.*";
+            dlg.Title = "Select T-eax File";
+
+            bool? result = dlg.ShowDialog();
+
+            if (result == true)
             {
-                myTextBox2.Text = dlg.FileName;
+                SelectTeax.Text = dlg.FileName;
             }
-        }
-
-        private void myButton1_Click(object sender, RoutedEventArgs e)
-        {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.Title = "Select Config File";
-            if (dlg.ShowDialog() == true)
-            {
-                myTextBox2.Text = dlg.FileName;
-            }
-        }
-
-        
-
-        private void myButton2_Click(object sender, RoutedEventArgs e)
-        {
 
         }
-        private void myButton3_Click(object sender, RoutedEventArgs e)
+        private void BrowseST_Click(object sender, RoutedEventArgs e)
         {
-            // Example: Open file dialog for Config file
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.Title = "Select Config File";
-            if (dlg.ShowDialog() == true)
+
+
+            dlg.Filter = "ST Files (*.st)|*.st|All Files (*.*)|*.*";
+            dlg.Title = "Select ST File";
+
+
+            bool? result = dlg.ShowDialog();
+
+            if (result == true)
             {
-                myTextBox2.Text = dlg.FileName;
+                SelectST.Text = dlg.FileName;
             }
+
+        }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
     }
