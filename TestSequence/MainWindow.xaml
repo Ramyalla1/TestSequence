@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Margin="0,0,0,4" HorizontalAlignment="Left" Width="790">
 
         <!-- First Stylish TextBox -->
         <Border CornerRadius="10" 
@@ -12,7 +12,7 @@
                 Margin="50,80,450,280"
                 Effect="{DynamicResource DropShadowEffect}">
             <TextBox Name="myTextBox"
-                     Text="Enter text here"
+                     Text="select T-eax file"
                      FontSize="18"
                      FontWeight="SemiBold"
                      Foreground="#007ACC"
@@ -32,7 +32,7 @@
                 Margin="50,240,450,130"
                 Effect="{DynamicResource DropShadowEffect}">
             <TextBox Name="myTextBox1"
-                     Text="Enter more text"
+                     Text="select ST file"
                      FontSize="18"
                      FontWeight="SemiBold"
                      Foreground="#007ACC"
@@ -45,7 +45,7 @@
         </Border>
 
         <Button Name="myButton"
-        Content="Click Me"
+        Content="Browse"
         Width="120"
         Height="40"
         Margin="470,80,160,280"
@@ -55,7 +55,7 @@
         BorderBrush="Transparent"
         Click="myButton_Click"/>
         <Button Name="myButton1"
-Content="Click Me"
+Content="Browse"
 Width="120"
 Height="40"
 Margin="495,252,185,142"
@@ -63,7 +63,48 @@ Background="#007ACC"
 Foreground="White"
 FontWeight="Bold"
 BorderBrush="Transparent"
-Click="myButton_Click"/>
+Click="myButton1_Click"/>
+        <Button Name="myButton2"
+Content="Submit"
+Width="120"
+Height="40"
+Margin="320,344,360,50"
+Background="#007ACC"
+Foreground="White"
+FontWeight="Bold"
+BorderBrush="Transparent"
+Click="myButton2_Click"/>
+        <!-- Third Stylish TextBox -->
+        <Border CornerRadius="10" 
+        Background="White" 
+        BorderBrush="#007ACC" 
+        BorderThickness="2" 
+        Margin="50,160,450,205"
+        Effect="{DynamicResource DropShadowEffect}">
+            <TextBox Name="myTextBox2"
+             Text="select Config file"
+             FontSize="18"
+             FontWeight="SemiBold"
+             Foreground="#007ACC"
+             Background="Transparent"
+             BorderThickness="0"
+             Padding="10"
+             VerticalContentAlignment="Center"
+             HorizontalContentAlignment="Left"/>
+        </Border>
+
+        <!-- Third Browse Button -->
+        <Button Name="myButton3"
+        Content="Browse"
+        Width="120"
+        Height="40"
+        Margin="470,160,160,205"
+        Background="#007ACC"
+        Foreground="White"
+        FontWeight="Bold"
+        BorderBrush="Transparent"
+        Click="myButton3_Click"/>
+
 
 
         <!-- Drop Shadow Effect Resource -->

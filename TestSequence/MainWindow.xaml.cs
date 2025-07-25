@@ -18,14 +18,40 @@ namespace TestSequence
     {
         private void myButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Button clicked! You entered: " + myTextBox.Text);
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.Title = "Select Config File";
+            if (dlg.ShowDialog() == true)
+            {
+                myTextBox2.Text = dlg.FileName;
+            }
         }
 
         private void myButton1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Button clicked! You entered: " + myTextBox.Text);
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.Title = "Select Config File";
+            if (dlg.ShowDialog() == true)
+            {
+                myTextBox2.Text = dlg.FileName;
+            }
         }
 
-       
+        
+
+        private void myButton2_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void myButton3_Click(object sender, RoutedEventArgs e)
+        {
+            // Example: Open file dialog for Config file
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.Title = "Select Config File";
+            if (dlg.ShowDialog() == true)
+            {
+                myTextBox2.Text = dlg.FileName;
+            }
+        }
+
     }
 }
